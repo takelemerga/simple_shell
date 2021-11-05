@@ -12,7 +12,7 @@ A user of this simple shell, can run different functionalities that the real she
 - Linux (Ubuntu 20.04 LTS).
 
 ## CREATION
-This simple shell was created an Ubuntu 14.04 LTS Operating system, using the C programming language.
+This simple shell was created an Ubuntu 20.04 LTS Operating system, using the C programming language.
 ## The essential Simple Shell Functionalities:
 * Passing Betty (code style checker for holberton C coding standards) checks.
 * Displaying a prompt and wait for user input.
