@@ -1,0 +1,52 @@
+.TH _HSH 1.0 "2 November 2021" "1.0" "Simple shell (hsh) man page"
+.SH NAME
+.hsh
+- a simple command interpreter (shell).
+.SH SYNOPSIS
+.B hsh [command_file [argument ...]]
+.br
+.B hsh [command_name [argument ...]]
+.SH DESCRIPTION
+The simple shell project is an end of trimester project focusing on covering the essential parts of the C programming language and Linux essential parts. 
+The simple shell runs simple commands with and without arguments, looks for commands in the PATH env variable, has some of the real shell essential built-ins such as the exit, env...
+.SH Path Search
+When locating a command, the shell first looks to see if it has a shell function by that name.  Then it looks for a builtin command by that name.  If a builtin command is not found, the command names containing a slash are executed without performing any searches, of the simple shell searches each entry in the PATH env variable to find the executable file of the desired command.
+.SH Builtins
+This section covers the shell builtins that we worked on recreating.
+.br
+.IP env
+It prints the current environment, which is a list of strings of the format (name=value). Each of these strings are displayed in a separate line.
+.IP exit
+It causes normal process termination.
+.IP help
+It display the man page of a given command.
+.IP history
+It displays the history list, one command by line, preceded with line numbers (starting at 0).
+.SH Command Exit Status
+Each command has an exit status that might influence the behaviour of other commands. The usual case is that on success (or normal behavior), a command exits with zero, and on failure (or false) with non-zero. The builtin commans return exit codes.
+.SH EXIT STATUS
+In case of an error inside the simple shell, it'll exit with a non-zero status. Otherwise, it'll execute what it's expected to do and exit with success, with a status of the value of 0.
+.br
+.B PATH
+ The default search path for executables.
+.br
+.B PWD
+ The logical value of the current working directory.
+.br
+.B OLDPWD
+ The previous logical value of the current working directory.
+.br
+.B PPID
+ The process ID of the parent process of the shell.
+.br
+.SH EXAMPLE
+You can use the shell in 2 ways, either it's an interactive mode or a non-interactive mode:
+.br
+.B Interactive mode
+- launch the simple shell by typing ./hsh then you get a prompt and you start working like in normal shell.
+.br
+.B Non-interactive mode
+- by piping to the simple shell the command you wanne execute. example: /bin/ls | ./hsh
+.br
+.SH AUTHOR
+.B takele merga.
