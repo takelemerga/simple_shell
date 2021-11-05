@@ -4,7 +4,7 @@
 * A simple Unix command interpreter.
 ## Project Description
 * this project is a simpler version of the linux shell.
-It englobes the essential parts that we've learned in C and Linux during the first Trimester at Holberton School.
+It englobes the essential parts that we've learned in C and Linux during the first Trimester at ALX software engineering program.
 A user of this simple shell, can run different functionalities that the real shell does.
 
 ## Technologies and Concepts
