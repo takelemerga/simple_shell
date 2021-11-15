@@ -9,15 +9,18 @@
  */
 char **tokenizer(char *str,  char *delim)
 {
-	if (str == NULL || delim == NULL)
-	return (NULL);
-	int i = 0;
+	int i;
 
-	int count = 0;
+	int  count;
 
 	char **tokens = NULL;
 	char *portion = NULL;
 	char *s = NULL;
+
+	if (str == NULL || delim == NULL)
+	return (NULL);
+	i = 0;
+	count = 0;
 
 	s = _strdup(str);
 	while (*str != '\0')
