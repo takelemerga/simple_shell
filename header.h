@@ -16,7 +16,8 @@ char **tokenizer(char *str, char *delim);
 char *get_path_value(char **environ, char *variable_name);
 void free_cmdline(char **cmdline_tokens);
 void exitfn(char **cmdline_tokens);
-void child_process_forker(char *av, char **cmdline_tokens, int status, char *line_ptr);
+void child_process_forker(char *av, char **cmdline_tokens,
+				int status, char *line_ptr);
 char *concatenate(char *cmdline_token, char **path_value_tokens);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
